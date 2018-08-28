@@ -11,7 +11,8 @@ namespace Demo
         {
             InitializeComponent();
 
-            MainPage = new Views.OnBoardingPage();
+            // MainPage = new Views.HomePage();
+            MainPage = new Views.EventInformation.EventInformationPage();
         }
 
         protected override void OnStart()
