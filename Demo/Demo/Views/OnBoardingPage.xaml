@@ -1,12 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:vm="clr-namespace:Demo.ViewModels"
              x:Class="Demo.Views.OnBoardingPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <ContentPage.BindingContext>
+        <vm:OnBoardingViewModel/>
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Here will be CarouselView  -->
+        <ContentView Grid.Row="0">
+            <controls:CarouselViewControl ItemsSource="{Binding Slides}"
+                                          ShowIndicators="True"
+                                          ShowArrows="False"
+                                          IndicatorsTintColor="DarkGray"
+                                          CurrentPageIndicatorTintColor="DodgerBlue">
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <ContentView Grid.Row="0" Padding="60,30,60,0">
+                                <Image Source="{Binding Image}" Aspect="AspectFit" />
+                            </ContentView>
+
+                            <ContentView Grid.Row="1" Padding="20,10,20,50">
+                                <Label Text="{Binding Description}"
+                                      
+                                       HorizontalTextAlignment="Center" />
+                            </ContentView>
+
+                        </Grid>
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>
+        </ContentView>
+
+        <!--  Buttons and label  -->
+        <StackLayout Grid.Row="1">
+            <Button  Text="Skip" 
+                     Opacity="90"
+                     BackgroundColor="DodgerBlue"
+                     FontAttributes="Bold"
+                     TextColor="Black"/>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
