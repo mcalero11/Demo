@@ -3,7 +3,9 @@ namespace Demo.ViewModels
 {
     using Models;
     using System.Collections.ObjectModel;
-
+    using System.Windows.Input;
+    using Xamarin.Forms;
+    using Views;
 
     public class OnBoardingViewModel : BaseViewModel
     {
@@ -29,6 +31,20 @@ namespace Demo.ViewModels
                 new Slide("landing02.png", "Some description for slide two."),
                 new Slide("landing03.png","Some description for slide three.")
             });
+        }
+
+        private async void Skip()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+        }
+        public ICommand SkipCommand
+        {
+            get
+            {
+                return new Command(() => {
+                    Skip();
+                });
+            }
         }
     }
 }

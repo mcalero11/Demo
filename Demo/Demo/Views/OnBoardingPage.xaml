@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:vm="clr-namespace:Demo.ViewModels"
+             NavigationPage.HasNavigationBar="False"
              x:Class="Demo.Views.OnBoardingPage">
     <ContentPage.BindingContext>
         <vm:OnBoardingViewModel/>
@@ -47,10 +48,11 @@
         <!--  Buttons and label  -->
         <StackLayout Grid.Row="1">
             <Button  Text="Skip" 
-                     Opacity="90"
-                     BackgroundColor="DodgerBlue"
+                     HeightRequest="40"         
+                     BackgroundColor="LightGray"
                      FontAttributes="Bold"
-                     TextColor="Black"/>
+                     TextColor="DarkGreen"
+                     Command="{Binding SkipCommand}"/>
         </StackLayout>
     </Grid>
 </ContentPage>
