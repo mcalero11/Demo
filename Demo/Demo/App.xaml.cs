@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Demo
 {
+    using Views;
     public partial class App : Application
     {
         public App()
@@ -12,7 +13,7 @@ namespace Demo
             InitializeComponent();
 
             // MainPage = new Views.HomePage();
-            MainPage = new Views.EventInformation.EventInformationPage();
+            MainPage = new OnBoardingPage();
         }
 
         protected override void OnStart()
