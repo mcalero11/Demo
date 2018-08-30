@@ -1,30 +1,139 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Demo.Views.EventInformation.EventInformationPage">
-    <ContentPage.Content>
+             x:Class="Demo.Views.EventInformation.EventInformationPage"
+             Title="prueba css" >
+<!--   para agregar un archivo css
+    <ContentPage.Resources>
+        <StyleSheet  Source="../../Estilo/Prueba.css" />
+    </ContentPage.Resources>  -->
+    
+    <ScrollView>
         
-           
-        <StackLayout Padding="10,0">
-            <Image Source="edificio.jpeg" HeightRequest="100"   />
-            <StackLayout>
-                <Grid>
-                    
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-
-                    </Grid.ColumnDefinitions>
-                     
-                <Image Source="reloj.png" HorizontalOptions="Start" Grid.Column="0" HeightRequest="30" WidthRequest="30"/>
-                <Label  Text="Location Information" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Start" Grid.Column="1"/>
-                </Grid>
-            </StackLayout>
-                
-            <StackLayout>
-                <Image Source="mapa.png" />
-            </StackLayout>
+        <!--Imagen de portada-->
+    <StackLayout  Padding="10,0">
+        <StackLayout>
+            <Image Source="edificio.jpeg" HeightRequest="100" Aspect="AspectFill"
+                   /> 
         </StackLayout>
+        <!--Inicio location information-->
+        <StackLayout Orientation="Horizontal">
+
+                <Label Text="h" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                <Label   Text="Location Information" FontAttributes="Bold"
+                        FontSize="Large" HorizontalOptions="Start"  />
         
-    </ContentPage.Content>
+        </StackLayout>
+        <!--fin location information-->
+        <!--Inicio Check Information-->
+            <StackLayout >
+                <StackLayout Orientation="Horizontal"  >
+
+
+
+                    <Label Text="o" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                    <Label 
+                            Text="Check-in Information" 
+                            VerticalOptions="Start"
+                           HorizontalOptions="Start" FontAttributes="Bold" FontSize="Large" />
+
+                </StackLayout>
+                <Label FontAttributes="Bold"
+                    Text="4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "
+                    />
+                
+            </StackLayout>
+        <!--fin check in information-->
+        <!-- inicio loading-->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                    <Label Text="a" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+
+                    <Label  Text="Lodging"  FontSize="Large" HorizontalOptions="Start" TextColor="Black" />
+            </StackLayout>
+
+            <Label    Text="Sheraton New Orleans Hotel   "/>
+            <Label   Text="Sheraton New Orleans Hotel 3 "/>
+            <Label   Text="Sheraton New Orleans Hotel2  "/>
+                <Button  HeightRequest="50" WidthRequest="100"  Text=" (503)458-5697  " FontSize="Micro" VerticalOptions="Start"  HorizontalOptions="Start"
+                               BackgroundColor="#2B8BE9" />
+                <Label Margin="0,0,125,0" Text="j (503)458-5697"
+                       TextColor="White" BackgroundColor="#2B8BE9" Style="{StaticResource Psummit}" />
+
+            </StackLayout>
+        <!--fin loading -->
+        <!--Inicio Event and Hotel Parking-->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+
+
+
+                    <Label Text="i" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                    <Label 
+                            Text="Event and Hotel Parking" FontAttributes="Bold"
+                            FontSize="Large"  VerticalOptions="Start"
+                           HorizontalOptions="Start" />
+
+            </StackLayout>
+            <Label  HorizontalOptions="Fill"   
+                       Text="4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+        </StackLayout>
+        <!--end Event and Hotel Parking-->
+        <!--Inicio Airport Information-->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+
+
+
+                    <Label Text="h" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                    <Label 
+                            Text="Airport Information" FontAttributes="Bold"
+                            FontSize="Large"  VerticalOptions="Start"
+                           HorizontalOptions="Start" />
+
+            </StackLayout>
+            <Label  HorizontalOptions="Fill"   
+                       Text="4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+        </StackLayout>
+        <!--end Airport Information-->
+        <!--Inicio Transportation-->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+
+
+
+                    <Label Text="g" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                    <Label 
+                            Text="Transportation" FontAttributes="Bold"
+                            FontSize="Large"  VerticalOptions="Start"
+                           HorizontalOptions="Start" />
+
+            </StackLayout>
+                <Label    Text="Taxi" FontAttributes="Bold" FontSize="Medium"/>
+                <Label   Text="• 4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+                <Label   Text="• 4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+                <Label    Text="Ride Shanring" FontAttributes="Bold" FontSize="Medium"/>
+                <Label   Text="• 4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+            </StackLayout>
+        <!--end Transportation-->
+        <!--Inicio  Local Dinning Options-->
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+
+
+
+                    <Label Text="f" TextColor="Black" FontSize="25" Style="{StaticResource Psummit}" HorizontalOptions="Start"/>
+                    <Label 
+                            Text="Local Dinning Options" FontAttributes="Bold"
+                            FontSize="Large"  VerticalOptions="Start"
+                           HorizontalOptions="Start" />
+
+            </StackLayout>
+            <Label  HorizontalOptions="Fill"   
+                       Text="4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+        </StackLayout>
+        <!--end Local Dinning Options-->
+    </StackLayout>
+    </ScrollView>
+
 </ContentPage>
