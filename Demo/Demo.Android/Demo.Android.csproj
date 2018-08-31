@@ -69,11 +69,11 @@
     <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\psp-summit-app.ttf" />
+    <AndroidAsset Include="Assets\SanFranciscoDisplay-Black.otf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\drawable\psp-summit-app.ttf" />
-    <AndroidResource Include="Resources\drawable\SanFranciscoDisplay-Black.otf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
