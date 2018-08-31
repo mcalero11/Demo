@@ -4,9 +4,12 @@
              xmlns:infra="clr-namespace:Demo.Infraestructure"
              x:Class="Demo.App">
     <Application.Resources>
-
         <ResourceDictionary>
             <infra:InstanceLocator x:Key="Locator"/>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="Title" Value="df"></Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
