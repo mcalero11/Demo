@@ -1,11 +1,12 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Demo
 {
+  
+    using Plugin.Iconize.Fonts;
     using Views;
+
     public partial class App : Application
     {
         public App()
@@ -14,6 +15,7 @@ namespace Demo
 
             // MainPage = new Views.HomePage();
             MainPage = new NavigationPage(new OnBoardingPage());
+            Plugin.Iconize.Iconize.With(new FontAwesomeModule());
         }
 
         protected override void OnStart()

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             x:Class="Demo.Views.Agenda.AgendaDaysPage"
+             NavigationPage.BackButtonTitle="Back"
+             Title="Agenda">
+
+
+    <ContentPage.ToolbarItems>
+        <iconize:IconToolbarItem Icon="fa" IsVisible="True"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{Binding AgendaDays}">
+            <StackLayout BackgroundColor="DodgerBlue" Padding="0,0,0,5">
+                <Image Source="agenda.jpg"/>
+            </StackLayout>
+            <StackLayout Padding="10">
+                <ListView
+                HasUnevenRows="True"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRefreshig,Mode=TwoWay}"
+                ItemsSource="{Binding Days}"
+                RefreshCommand="{Binding RefreshCommand}"
+                SeparatorVisibility="None"
+                >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame
+                                Margin="5"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                BackgroundColor="#282828">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SelectDayCommand}"/>
+                                    </Frame.GestureRecognizers>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <iconize:IconLabel
+                                        Grid.Column="0"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="Center"
+                                        FontSize="25"
+                                        TextColor="White"
+                                        Text="fa-calendar"/>
+                                        
+                                        <StackLayout
+                                        Grid.Column="1"
+                                        VerticalOptions="Center">
+                                            <Label
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding Day}"
+                                        TextColor="White"
+                                        HorizontalOptions="Center"/>
+                                            <Label
+                                        Text="{Binding Month}"
+                                        TextColor="White"
+                                        HorizontalOptions="Center"/>
+                                        </StackLayout>
+                                        
+                                        <iconize:IconLabel
+                                        Grid.Column="2"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Center"
+                                        FontSize="25"
+                                        TextColor="White"
+                                        Text="fa-chevron-right"/>
+                                    </Grid>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
