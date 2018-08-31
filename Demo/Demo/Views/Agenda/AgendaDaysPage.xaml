@@ -4,12 +4,12 @@
              xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
              x:Class="Demo.Views.Agenda.AgendaDaysPage"
-             NavigationPage.BackButtonTitle="Back"
+             NavigationPage.BackButtonTitle="Back" 
              Title="Agenda">
 
 
     <ContentPage.ToolbarItems>
-        <iconize:IconToolbarItem Icon="fa" IsVisible="True"/>
+        <ToolbarItem Icon="home.png"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding AgendaDays}">
@@ -20,7 +20,7 @@
                 <ListView
                 HasUnevenRows="True"
                 IsPullToRefreshEnabled="True"
-                IsRefreshing="{Binding IsRefreshig,Mode=TwoWay}"
+                IsRefreshing="{Binding IsBusy,Mode=TwoWay}"
                 ItemsSource="{Binding Days}"
                 RefreshCommand="{Binding RefreshCommand}"
                 SeparatorVisibility="None"

@@ -11,6 +11,16 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="Title" Value="df"></Setter>
             </Style>
+            
+            
+            <!--agregar fuente ttf-->
+            <Style x:Key="Psummit" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" Value="Assets/psp-summit-app.ttf#psp-summit-app"/>
+                    </OnPlatform>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

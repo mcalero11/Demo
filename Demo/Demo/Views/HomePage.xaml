@@ -7,11 +7,10 @@
              x:Class="Demo.Views.HomePage">
 
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Home}">
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BindingContext="{Binding Home}" Padding="50">
+        
             <Button Text="Agenda" Command="{Binding AgendaCommand}"/>
+            <Button Text="EventInformation" Command="{Binding EventInformationCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
