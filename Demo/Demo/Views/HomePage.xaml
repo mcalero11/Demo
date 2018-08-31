@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              NavigationPage.HasBackButton="False"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
              Title="Home Demo" 
              x:Class="Demo.Views.HomePage">
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BindingContext="{Binding Home}">
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Agenda" Command="{Binding AgendaCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
