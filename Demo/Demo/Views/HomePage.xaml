@@ -12,6 +12,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Button Text="Agenda" Command="{Binding AgendaCommand}"/>
+            <Button Text="EventInformation" Command="{Binding EventInformationCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
