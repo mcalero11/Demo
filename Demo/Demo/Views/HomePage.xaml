@@ -11,6 +11,7 @@
         
             <Button Text="Agenda" Command="{Binding AgendaCommand}"/>
             <Button Text="EventInformation" Command="{Binding EventInformationCommand}"/>
+            <Button Text="Partners" Command="{Binding PartnersCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

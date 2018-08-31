@@ -24,5 +24,10 @@ namespace Demo.Views.Partners
             var Item = e.SelectedItem as Demo.Models.Partners.Partners;
             CrossShare.Current.OpenBrowser(Item.Url);
         }
+
+        private void IcoHome_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
     }
 }
