@@ -3,34 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.App">
     <Application.Resources>
-
-
-        <!--        Para agregar fuentes ttf -->
-        <Style x:Key="Psummit" TargetType="Label">
-            <Setter Property="FontFamily">
-                <OnPlatform x:TypeArguments="x:String" >
-                    <On Platform="Android" Value="psp-summit-app.ttf#psp-summit-app" />
-                </OnPlatform>
-
-            </Setter>
-        </Style>
-
-
-        <Style x:Key="Sanfra" TargetType="Label">
-            <Setter Property="FontFamily">
-                <OnPlatform x:TypeArguments="x:String" >
-                    <On Platform="Android" Value="SanFranciscoDisplay-Black.otf#SanFranciscoDisplay-Black" />
-                </OnPlatform>
-
-            </Setter>
-        </Style>
-     
-        
-        
-<!--
-        <OnPlatform x:TypeArguments="x:String" x:Key="Psummit">
-            <On Platform="Android" Value="psp-summit-app.ttf#psp-summit-app" />
-        </OnPlatform>
--->
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="Title" Value="df"></Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
