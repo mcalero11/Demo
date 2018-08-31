@@ -9,9 +9,9 @@ namespace Demo.ViewModels
 
     public class OnBoardingViewModel : BaseViewModel
     {
-        private ObservableCollection<Slide> slide;
+        private ObservableCollection<OnBoarding> slide;
 
-        public ObservableCollection<Slide> Slides
+        public ObservableCollection<OnBoarding> Slides
         {
             get
             {
@@ -25,17 +25,20 @@ namespace Demo.ViewModels
 
         public OnBoardingViewModel()
         {
-            Slides = new ObservableCollection<Slide>(new[]
+            Slides = new ObservableCollection<OnBoarding>
             {
-                new Slide("landing01.png","Some description for slide one."),
-                new Slide("landing02.png", "Some description for slide two."),
-                new Slide("landing03.png","Some description for slide three.")
-            });
+               new OnBoarding("landing01","Texto 1"),
+               new OnBoarding("landing02","Texto 2"),
+               new OnBoarding("landing03","Texto 3")
+
+            };
         }
 
         private async void Skip()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+            MainViewModel.GetInstance.Home = new HomeViewModel();
+           await Application.Current.MainPage.Navigation.PushAsync(new HomePage());
+            
         }
         public ICommand SkipCommand
         {
