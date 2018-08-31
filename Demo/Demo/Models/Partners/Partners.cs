@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Plugin.Share;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Demo.Models.Partners
 {
@@ -8,6 +10,7 @@ namespace Demo.Models.Partners
     {
         public string Photo { get; set; }
         public string Title { get; set; }
+        public Task Url { get; set; }
 
         public List<Partners> GetPartners()
         {
@@ -16,12 +19,15 @@ namespace Demo.Models.Partners
                 new Partners
                 {
                     Photo = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/US-AlcoholTobaccoFirearmsAndExplosives-Seal.svg/2000px-US-AlcoholTobaccoFirearmsAndExplosives-Seal.svg.png",
-                    Title = "Boreau of Alcohol, Tobacco, Firearms and Explosives (ATF)"
+                    Title = "Boreau of Alcohol, Tobacco, Firearms and Explosives (ATF)",
+                    Url = CrossShare.Current.OpenBrowser("https://www.google.com")
+           
                 },
                 new Partners
                 {
                     Photo = "https://vignette.wikia.nocookie.net/blindspot/images/1/1b/DEA_logo.png/revision/latest?cb=20170519212558",
-                    Title = "U.S. Departament of Justice, Drug Enforcement Administration (DEA)"
+                    Title = "U.S. Departament of Justice, Drug Enforcement Administration (DEA)",
+                    Url = CrossShare.Current.OpenBrowser("https://www.youtube.com")
                 },
                 new Partners
                 {
@@ -53,6 +59,7 @@ namespace Demo.Models.Partners
                     Photo = "https://sapac.umich.edu/files/sapac/field/image/OVW-home.png",
                     Title = "Office on Violence Against Women (OVW)"
                 }
+                
             };
         }
     }

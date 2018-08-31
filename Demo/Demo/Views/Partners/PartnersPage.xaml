@@ -14,7 +14,7 @@
         <Label Text="We would like to recognize and thank our federal partners" 
                FontAttributes="Bold" FontSize="Large" Font="17" HorizontalTextAlignment="Center"
                HorizontalOptions="CenterAndExpand" TextColor="Black"/>
-        <ListView ItemsSource="{Binding ListPartners}" RowHeight="140">
+        <ListView ItemsSource="{Binding ListPartners}" ItemSelected="lvlORG_ItemSelected" RowHeight="140" x:Name="lvlORG">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -26,6 +26,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
+                            
                             <Image Source="{Binding Photo}" HeightRequest="150" WidthRequest="150"
                                    Grid.Row="0" Grid.Column="0"/>
                             <Label Text="{Binding Title}" FontAttributes="Bold" Grid.Row="1" Grid.Column="0"
