@@ -14,7 +14,7 @@ namespace Demo
             InitializeComponent();
 
             // MainPage = new Views.HomePage();
-            MainPage = new NavigationPage(new OnBoardingPage());
+            MainPage = new NavigationPage(new Views.Partners.PartnersPage());
             Plugin.Iconize.Iconize.With(new FontAwesomeModule());
         }
 
