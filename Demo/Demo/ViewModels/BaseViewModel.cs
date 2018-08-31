@@ -23,5 +23,14 @@
             backinFiel = value;
             OnPropertyChanged(propertyName);
         }
+
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set { SetValue(ref isBusy, value); }
+        }
+
     }
 }

@@ -5,6 +5,8 @@
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
+    using System.Windows.Input;
+    using Xamarin.Forms;
 
     public class AgendaDaysViewModel : BaseViewModel
     {
@@ -28,6 +30,7 @@
         #region Methods
         private void LoadDays()
         {
+            IsBusy = true;
             List<AgendaDays> response = new List<AgendaDays>()
             {
                 new AgendaDays(){
@@ -47,11 +50,12 @@
                 }
 
             };
-      
-           
+
+
             MainViewModel.GetInstance.AgendaDaysList = response;
             this.Days = new ObservableCollection<AgendaDaysItemViewModel>(
                 this.ToItemViewModel());
+            IsBusy = false;
         }
 
         private IEnumerable<AgendaDaysItemViewModel> ToItemViewModel()
@@ -63,6 +67,16 @@
                 Day = l.Day,
                 Month = l.Month
             });
+        }
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(() => {
+                    LoadDays();
+                });
+            }
         }
         #endregion
     }
