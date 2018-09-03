@@ -2,8 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.Views.EventInformation.EventInformationPage"
-             Title="prueba css" >
-<!--   para agregar un archivo css
+             xmlns:vm="clr-namespace:Demo.ViewModels.EventInformation"
+             xmlns:custom="clr-namespace:Demo.Infraestructure.CustomForms;assembly= Demo.Infraestructure"
+             Title="Efent Information" >
+    <!--Inicio del Binding-->
+    <ContentPage.BindingContext>
+        <vm:EventInformationViewModel/>
+    </ContentPage.BindingContext>
+    <!--Finalizacion del binding-->
+    <!--   para agregar un archivo css
     <ContentPage.Resources>
         <StyleSheet  Source="../../Estilo/Prueba.css" />
     </ContentPage.Resources>  -->
@@ -11,7 +18,7 @@
     <ScrollView>
         
         <!--Imagen de portada-->
-    <StackLayout  Padding="10,0">
+    <StackLayout  Padding="10,0" >
         <StackLayout>
             <Image Source="edificio.jpeg" HeightRequest="100" Aspect="AspectFill"
                    /> 
@@ -129,8 +136,17 @@
                            HorizontalOptions="Start" />
 
             </StackLayout>
+            <!--hipervinculo con el nuget-->
             <Label  HorizontalOptions="Fill"   
                        Text="4:00 - 6pm. asdsaewqewqe and 7.25 p, - 6.25p,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem "/>
+                <Label Text="https://www.google.com/" TextColor="Blue" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EnlaceLocalDinning1}"/>
+                    </Label.GestureRecognizers>
+                    <Label.Effects>
+                        <custom:UnderLineEffect />
+                    </Label.Effects>
+                </Label>
         </StackLayout>
         <!--end Local Dinning Options-->
     </StackLayout>

@@ -26,7 +26,7 @@
         private async void EventInformation()
         {
 
-            //MainViewModel.GetInstance.AgendaDays = new AgendaDaysViewModel();
+            MainViewModel.GetInstance.Evento = new EventInformation.EventInformationViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new EventInformationPage());
         }
         public ICommand EventInformationCommand

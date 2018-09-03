@@ -17,7 +17,7 @@
             <Style x:Key="Psummit" TargetType="Label">
                 <Setter Property="FontFamily">
                     <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Assets/psp-summit-app.ttf#psp-summit-app"/>
+                        <On Platform="Android" Value="psp-summit-app.ttf#psp-summit-app"/>
                     </OnPlatform>
                 </Setter>
             </Style>

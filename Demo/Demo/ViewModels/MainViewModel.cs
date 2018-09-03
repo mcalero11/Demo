@@ -22,6 +22,7 @@
         public AgendaDaysViewModel AgendaDays { get; set; }
         public AgendaTimeViewModel AgendaTime { get; set; }
         public HomeViewModel Home { get; set; }
+        public EventInformation.EventInformationViewModel Evento { get; set; }
         #endregion
 
         #region Constructor
