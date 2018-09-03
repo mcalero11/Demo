@@ -66,6 +66,7 @@
 
             return MainViewModel.GetInstance.AgendaDaysList.Select(l => new AgendaDaysItemViewModel
             {
+                TopBarTitle = l.TopBarTitle,
                 DayOfWeek = l.DayOfWeek,
                 DateTitle = l.DateTitle
             });
