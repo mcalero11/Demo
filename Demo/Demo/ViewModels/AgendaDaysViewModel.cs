@@ -34,18 +34,18 @@
             List<AgendaDays> response = new List<AgendaDays>()
             {
                 new AgendaDays(){
-                    Day = 1,
-                    Month = "Enero"
+                    DayOfWeek = "Monday",
+                    DateTitle = "September 11"
 
                 },
                  new AgendaDays(){
-                    Day = 2,
-                    Month = "Marzo"
+                    DayOfWeek = "Tuesday",
+                    DateTitle = "September 12"
 
                 },
                   new AgendaDays(){
-                    Day = 1,
-                    Month = "Febreo"
+                   DayOfWeek = "Wednesday",
+                    DateTitle = "September 13"
 
                 }
 
@@ -64,8 +64,8 @@
 
             return MainViewModel.GetInstance.AgendaDaysList.Select(l => new AgendaDaysItemViewModel
             {
-                Day = l.Day,
-                Month = l.Month
+                DayOfWeek = l.DayOfWeek,
+                DateTitle = l.DateTitle
             });
         }
 

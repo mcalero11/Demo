@@ -56,11 +56,11 @@
                                             <Label
                                         FontAttributes="Bold"
                                         FontSize="Medium"
-                                        Text="{Binding Day}"
+                                        Text="{Binding DayOfWeek}"
                                         TextColor="White"
                                         HorizontalOptions="Center"/>
                                             <Label
-                                        Text="{Binding Month}"
+                                        Text="{Binding DateTitle}"
                                         TextColor="White"
                                         HorizontalOptions="Center"/>
                                         </StackLayout>

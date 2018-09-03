@@ -1,10 +1,22 @@
 ﻿namespace Demo.Models
 {
-    using System;
 
     public class AgendaDays
     {
-        public int Day { get; set; }
-        public string Month { get; set; }
+        
+        public long AgendaDayId { get; set; }
+
+        
+        public string DayOfWeek { get; set; }
+
+        
+        public string DateTitle { get; set; }
+
+       
+        public string TopBarTitle { get; set; }
+
+
+        public long ListOrder { get; set; }
+
     }
 }
