@@ -8,10 +8,12 @@
 
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="home.png"/>
+        <ToolbarItem Icon="home.png" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding AgendaDays}">
+        <ScrollView>
+           
+         <StackLayout BindingContext="{Binding AgendaDays}">
             <StackLayout BackgroundColor="DodgerBlue" Padding="0,0,0,5">
                 <Image Source="agenda.jpg"/>
             </StackLayout>
@@ -22,10 +24,9 @@
                 IsRefreshing="{Binding IsBusy,Mode=TwoWay}"
                 ItemsSource="{Binding Days}"
                 RefreshCommand="{Binding RefreshCommand}"
-                SeparatorVisibility="None"
-                >
+                SeparatorVisibility="None">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate >
                             <ViewCell>
                                 <Frame
                                 Margin="5"
@@ -81,5 +82,6 @@
                 </ListView>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
