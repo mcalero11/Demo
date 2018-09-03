@@ -3,6 +3,7 @@
     using Models;
     using ViewModels.Partners;
     using ViewModels.Agenda;
+    using ViewModels.Speaker;
     using System.Collections.Generic;
 
     public class MainViewModel
@@ -18,6 +19,11 @@
             get;
             set;
         }
+        public List<Speakers> SpeakerList
+        {
+            get;
+            set;
+        }
         #endregion
 
         #region ViewModels
@@ -26,6 +32,8 @@
         public AgendaTimeViewModel AgendaTime { get; set; }
         public HomeViewModel Home { get; set; }
         public PartnersPageViewModels Partners { get; set; }
+        public SpeakerViewModel Speakers { get; set; }
+        public SpeakerDetailViewModel SpeakersDetail { get; set; }
         public EventInformation.EventInformationViewModel Evento { get; set; }
         #endregion
 

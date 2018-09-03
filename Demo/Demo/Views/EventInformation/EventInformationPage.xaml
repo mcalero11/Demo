@@ -62,7 +62,7 @@
             <Label    Text="Sheraton New Orleans Hotel   "/>
             <Label   Text="Sheraton New Orleans Hotel 3 "/>
             <Label   Text="Sheraton New Orleans Hotel2  "/>
-                <Button  HeightRequest="50" WidthRequest="100"  Text=" (503)458-5697  " FontSize="Micro" VerticalOptions="Start"  HorizontalOptions="Start"
+                <Button  HeightRequest="30" WidthRequest="80"  Text=" (503)458-5697  " FontSize="Micro" VerticalOptions="Start"  HorizontalOptions="Start"
                                BackgroundColor="#2B8BE9" />
                 <Label Margin="0,0,125,0" Text="j (503)458-5697"
                        TextColor="White" BackgroundColor="#2B8BE9" Style="{StaticResource Psummit}" />

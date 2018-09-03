@@ -6,6 +6,7 @@
     using Views.Agenda;
     using Views.Partners;
     using Views.EventInformation;
+    using Views.Speakers;
 
     public class HomeViewModel
     {
@@ -31,6 +32,13 @@
 
             MainViewModel.GetInstance.Partners = new Partners.PartnersPageViewModels();
             await Application.Current.MainPage.Navigation.PushAsync(new PartnersPage());
+        }
+
+        private async void Speakers()
+        {
+
+            MainViewModel.GetInstance.Speakers = new Speaker.SpeakerViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new SpeakersPage());
         }
         #endregion
 
@@ -65,6 +73,17 @@
                 return new Command(() =>
                 {
                     Partners();
+                });
+            }
+        }
+
+        public ICommand SpeakersCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    Speakers();
                 });
             }
         }

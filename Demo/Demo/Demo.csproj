@@ -34,11 +34,16 @@
     <EmbeddedResource Update="Views\Partners\PartnersPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Speakers\DetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Speakers\SpeakersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Views\Announcements\" />
-    <Folder Include="Views\Speakers\" />
   </ItemGroup>
 </Project>

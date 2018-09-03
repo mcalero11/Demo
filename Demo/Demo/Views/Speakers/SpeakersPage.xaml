@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             x:Class="Demo.Views.Speakers.SpeakersPage"
+             Title="Speakers">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="home.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout BindingContext="{Binding Speakers}">
+                <StackLayout>
+                    <ListView
+                        HasUnevenRows="True"
+                        IsPullToRefreshEnabled="True"
+                        IsRefreshing="{Binding IsBusy,Mode=TwoWay}"
+                        ItemsSource="{Binding SpeakersList}"
+                        RefreshCommand="{Binding RefreshCommand}"
+                        >
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+                                <ViewCell>
+                                    <Grid VerticalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding SelectSpeakerCommand}"/>
+                                        </Grid.GestureRecognizers>
+                                            <Image
+                                        Grid.Column="0"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        WidthRequest="80"
+                                        HeightRequest="80"
+                                        Margin="5"
+                                        Source="{Binding PhotoLocation}"/>
+
+                                            <StackLayout
+                                        Grid.Column="1"
+                                        VerticalOptions="Start">
+                                                <Label
+                                        FontAttributes="Bold"
+                                        FontSize="Medium"
+                                        Text="{Binding FullName}"
+                                        TextColor="Black"
+                                        HorizontalOptions="StartAndExpand"/>
+                                                <Label
+                                        Text="{Binding ListTitle}"
+                                        FontSize="Small"
+                                        TextColor="Black"
+                                        HorizontalOptions="StartAndExpand"/>
+                                            </StackLayout>
+
+                                            <Label
+                                        Grid.Column="2"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="Center"
+                                        FontSize="15"
+                                        Margin="5"
+                                        TextColor="DodgerBlue"
+                                        Text="l"
+                                        Style="{StaticResource Psummit}"/>
+                                        </Grid>
+                                  
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

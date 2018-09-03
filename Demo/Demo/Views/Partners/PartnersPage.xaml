@@ -11,10 +11,20 @@
         <ToolbarItem Icon="home.png" x:Name="IcoHome" Clicked="IcoHome_Clicked"/>
     </ContentPage.ToolbarItems>
     <StackLayout Margin="0,0,0,5">
-        <Label Text="We would like to recognize and thank our federal partners" 
-               FontAttributes="Bold" FontSize="Large" Font="17" HorizontalTextAlignment="Center"
-               HorizontalOptions="CenterAndExpand" TextColor="Black"/>
-        <ListView ItemsSource="{Binding ListPartners}" ItemSelected="lvlORG_ItemSelected" RowHeight="140" x:Name="lvlORG">
+        
+        <ListView HasUnevenRows="True" Header="{Binding}" 
+                  ItemsSource="{Binding ListPartners}" 
+                  ItemSelected="lvlORG_ItemSelected" RowHeight="140" x:Name="lvlORG">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+
+                    <ContentView>
+                        <Label Text="We would like to recognize and thank our federal partners" 
+                       FontAttributes="Bold" FontSize="Large" Font="17" HorizontalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand" TextColor="Black"/>  
+                    </ContentView>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
