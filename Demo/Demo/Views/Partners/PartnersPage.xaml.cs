@@ -22,7 +22,12 @@ namespace Demo.Views.Partners
         private void lvlORG_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var Item = e.SelectedItem as Demo.Models.Partners.Partners;
-           
+            CrossShare.Current.OpenBrowser(Item.Url);
+        }
+
+        private void IcoHome_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
         }
     }
 }

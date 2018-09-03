@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Plugin.Iconize;
+
 
 namespace Demo.Droid
 {
@@ -23,7 +23,7 @@ namespace Demo.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            Iconize.Init(Resource.Id.toolbar);
+           
 
             LoadApplication(new App());
         }

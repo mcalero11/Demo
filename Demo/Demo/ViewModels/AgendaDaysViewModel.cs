@@ -34,18 +34,21 @@
             List<AgendaDays> response = new List<AgendaDays>()
             {
                 new AgendaDays(){
-                    Day = 1,
-                    Month = "Enero"
+                    TopBarTitle = "Monday,Sept 11",
+                    DayOfWeek = "Monday",
+                    DateTitle = "September 11"
 
                 },
                  new AgendaDays(){
-                    Day = 2,
-                    Month = "Marzo"
+                    TopBarTitle = "Tuesday,Sept 12",
+                    DayOfWeek = "Tuesday",
+                    DateTitle = "September 12"
 
                 },
                   new AgendaDays(){
-                    Day = 1,
-                    Month = "Febreo"
+                   TopBarTitle = "Wednesday,Sept 13",
+                   DayOfWeek = "Wednesday",
+                    DateTitle = "September 13"
 
                 }
 
@@ -60,12 +63,11 @@
 
         private IEnumerable<AgendaDaysItemViewModel> ToItemViewModel()
         {
-            DateTime aDateTime = DateTime.Now;
 
             return MainViewModel.GetInstance.AgendaDaysList.Select(l => new AgendaDaysItemViewModel
             {
-                Day = l.Day,
-                Month = l.Month
+                DayOfWeek = l.DayOfWeek,
+                DateTitle = l.DateTitle
             });
         }
 

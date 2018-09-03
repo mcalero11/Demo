@@ -1,6 +1,7 @@
 ﻿namespace Demo.ViewModels
 {
     using Models;
+    using ViewModels.Partners;
     using System.Collections.Generic;
 
     public class MainViewModel
@@ -17,12 +18,13 @@
             set;
         }
         #endregion
+
         #region ViewModels
         public OnBoardingViewModel OnBoarding { get; set; }
         public AgendaDaysViewModel AgendaDays { get; set; }
         public AgendaTimeViewModel AgendaTime { get; set; }
         public HomeViewModel Home { get; set; }
-        public EventInformation.EventInformationViewModel Evento { get; set; }
+        public PartnersPageViewModels Partners { get; set; }
         #endregion
 
         #region Constructor
