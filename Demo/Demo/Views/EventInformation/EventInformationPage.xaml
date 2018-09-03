@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Demo.Views.EventInformation.EventInformationPage"
              xmlns:vm="clr-namespace:Demo.ViewModels.EventInformation"
-             xmlns:custom="clr-namespace:Demo.Infraestructure.CustomForms;assembly= Demo.Infraestructure"
+             xmlns:custom="clr-namespace:Demo.Infraestructure;assembly= Demo.Infraestructure"
              Title="Efent Information" >
     <!--Inicio del Binding-->
     <ContentPage.BindingContext>
@@ -143,9 +143,7 @@
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding EnlaceLocalDinning1}"/>
                     </Label.GestureRecognizers>
-                    <Label.Effects>
-                        <custom:UnderLineEffect />
-                    </Label.Effects>
+                    
                 </Label>
         </StackLayout>
         <!--end Local Dinning Options-->
