@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
              x:Class="Demo.Views.Agenda.AgendaDaysPage"
              NavigationPage.BackButtonTitle="Back" 
@@ -39,16 +38,17 @@
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <iconize:IconLabel
+                                        <Label
                                         Grid.Column="0"
                                         HorizontalOptions="Start"
                                         VerticalOptions="Center"
                                         FontSize="25"
                                         TextColor="White"
-                                        Text="fa-calendar"/>
+                                        Text="m"
+                                        Style="{StaticResource Psummit}"/>
                                         
                                         <StackLayout
                                         Grid.Column="1"
@@ -65,13 +65,14 @@
                                         HorizontalOptions="Center"/>
                                         </StackLayout>
                                         
-                                        <iconize:IconLabel
+                                        <Label
                                         Grid.Column="2"
                                         HorizontalOptions="End"
                                         VerticalOptions="Center"
                                         FontSize="25"
                                         TextColor="White"
-                                        Text="fa-chevron-right"/>
+                                        Text="l"
+                                        Style="{StaticResource Psummit}"/>
                                     </Grid>
                                 </Frame>
                             </ViewCell>

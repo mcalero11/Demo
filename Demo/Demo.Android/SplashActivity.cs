@@ -23,7 +23,7 @@ namespace Demo.Droid
             base.OnCreate(savedInstanceState);
             
             Log.Debug(TAG, "SplashActivity.OnCreate");
-            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
+           
             // Create your application here
         }
 
@@ -40,7 +40,7 @@ namespace Demo.Droid
             await Task.Delay(2000); // Simulate a bit of startup work.
             Log.Debug(TAG, "Startup work is finished - starting MainActivity.");
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
-            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
+           
 
         }
     }

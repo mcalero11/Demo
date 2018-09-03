@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 namespace Demo
 {
   
-    using Plugin.Iconize.Fonts;
+    
     using Views;
 
     public partial class App : Application
@@ -16,7 +16,7 @@ namespace Demo
             // MainPage = new Views.HomePage();
             MainPage = new NavigationPage(new OnBoardingPage());
            // MainPage = new NavigationPage(new Views.EventInformation.EventInformationPage());
-            Plugin.Iconize.Iconize.With(new FontAwesomeModule());
+           
         }
 
         protected override void OnStart()
