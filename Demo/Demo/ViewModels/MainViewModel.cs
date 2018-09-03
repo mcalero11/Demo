@@ -2,6 +2,7 @@
 {
     using Models;
     using ViewModels.Partners;
+    using ViewModels.Agenda;
     using System.Collections.Generic;
 
     public class MainViewModel

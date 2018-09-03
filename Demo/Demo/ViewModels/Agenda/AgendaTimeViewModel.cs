@@ -1,4 +1,4 @@
-﻿namespace Demo.ViewModels
+﻿namespace Demo.ViewModels.Agenda
 {
     using Models;
     public class AgendaTimeViewModel

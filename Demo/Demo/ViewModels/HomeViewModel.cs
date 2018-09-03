@@ -1,8 +1,9 @@
 ﻿namespace Demo.ViewModels
 {
-    using Views.Agenda;
+    
     using System.Windows.Input;
     using Xamarin.Forms;
+    using Views.Agenda;
     using Views.Partners;
     using Views.EventInformation;
 
@@ -12,7 +13,7 @@
         private async void AgendaDays()
         {
 
-            MainViewModel.GetInstance.AgendaDays = new AgendaDaysViewModel();
+            MainViewModel.GetInstance.AgendaDays = new Agenda.AgendaDaysViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new AgendaDaysPage());
         }
 
@@ -28,7 +29,7 @@
         private async void Partners()
         {
 
-            MainViewModel.GetInstance.Partners = new ViewModels.Partners.PartnersPageViewModels();
+            MainViewModel.GetInstance.Partners = new Partners.PartnersPageViewModels();
             await Application.Current.MainPage.Navigation.PushAsync(new PartnersPage());
         }
         #endregion
