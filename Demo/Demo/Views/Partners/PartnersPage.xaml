@@ -8,7 +8,9 @@
         <vm:PartnersPageViewModels/>
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="home.png" x:Name="IcoHome" Clicked="IcoHome_Clicked"/>
+        <ToolbarItem Icon="home.png" x:Name="IcoHome" 
+                     Command="{Binding SkipCommand}"
+                      />
     </ContentPage.ToolbarItems>
     <StackLayout Margin="0,0,0,5">
         

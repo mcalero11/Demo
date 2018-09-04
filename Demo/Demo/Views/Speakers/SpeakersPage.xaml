@@ -41,20 +41,20 @@
                                         Source="{Binding PhotoLocation}"/>
 
                                             <StackLayout
-                                        Grid.Column="1"
-                                        VerticalOptions="Start">
-                                                <Label
-                                        FontAttributes="Bold"
-                                        FontSize="Medium"
-                                        Text="{Binding FullName}"
-                                        TextColor="Black"
-                                        HorizontalOptions="StartAndExpand"/>
-                                                <Label
-                                        Text="{Binding ListTitle}"
-                                        FontSize="Small"
-                                        TextColor="Black"
-                                        HorizontalOptions="StartAndExpand"/>
-                                            </StackLayout>
+                                            Grid.Column="1"
+                                            VerticalOptions="Start">
+                                                    <Label
+                                            FontAttributes="Bold"
+                                            FontSize="Medium"
+                                            Text="{Binding FullName}"
+                                            TextColor="Black"
+                                            HorizontalOptions="StartAndExpand"/>
+                                            <Label
+                                            Text="{Binding ListTitle}"
+                                            FontSize="Small"
+                                            TextColor="Black"
+                                            HorizontalOptions="StartAndExpand"/>
+                                        </StackLayout>
 
                                             <Label
                                         Grid.Column="2"
